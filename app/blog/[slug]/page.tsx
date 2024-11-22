@@ -11,9 +11,9 @@ interface DataType {
   price: string;
 }
 
-const SingleBlog = () => {
+export default function SingleBlog() {
   const { slug } = useParams();
-  const [data, setData] = useState<DataType | null>(null);
+  const [data, setData] =   useState<DataType | null>(null);
 
   useEffect(() => {
     if (slug) {
@@ -54,5 +54,3 @@ const SingleBlog = () => {
     </div>
   );
 };
-
-export default SingleBlog;
