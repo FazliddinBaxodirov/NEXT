@@ -12,7 +12,7 @@ interface ListType {
 }
 
 const page = () => {
-  const [list,setList] = useState([])
+  const [list,setList] = useState<ListType[]>([])
   useEffect(() => {
     axios.get("https://api.escuelajs.co/api/v1/products").then(res => {
       setList(res.data.splice(4,21).map((item:any) => {
